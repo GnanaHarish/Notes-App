@@ -1,0 +1,13 @@
+<div class="container-fluid container-fluid-custom pb-5 mb-5">
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(searchResult != ''){ %>
+            <% searchResult.forEach((note, idx) => {  %>
+                <a href="/dashboard/item/<%= note._id%>">
+                    <h4><%= note.title%></h4>
+                </a>
+           <%  }) %>
+         <%}else{%>
+            <p>Nope, nada, zilch. Maybe try searching for something else?</p>
+         <% } %>   
+    </div>
+</div>
